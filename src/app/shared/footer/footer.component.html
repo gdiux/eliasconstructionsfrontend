@@ -6,12 +6,12 @@
                 <div style="max-width: 26rem;">
                     <h3 class="mb-4">Newsletter</h3>
                     <p class="text-body mb-4 pb-2">Please, subscribe to our newsletter to keep updated about our news and offers.</p>
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate [formGroup]="newForm" (ngSubmit)="create()">
                         <div class="input-group">
-                            <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                            <input formControlName="email" type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" [required]="validate('email')">
                             <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                            <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                            <div *ngIf="validate('email')" class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                            <button type="submit" [disabled]="validate('email')" class="btn btn-primary">Subscribe</button>
                         </div>
                     </form>
                 </div>

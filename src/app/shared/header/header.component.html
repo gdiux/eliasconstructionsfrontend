@@ -68,24 +68,31 @@
             <div class="modal-body py-4">
 
                 <!-- Sign in form -->
-                <form autocomplete="off">
-
+                <form class="needs-validation" autocomplete="off" [formGroup]="newForm" (ngSubmit)="create()">
                     <div class="mb-3">
                         <label class="form-label" for="name">Names</label>
-                        <input class="form-control" type="text" id="name" placeholder="Jhon Doe">
+                        <input [required]="validate('name')" formControlName="name" class="form-control" type="text" id="name" placeholder="Jhon Doe">
+                        <div class="invalid-feedback" *ngIf="validate('name')">This text field is required</div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="phone">Phone</label>
-                        <input class="form-control" type="tel" id="phone" placeholder="Your phone">
+                        <input [required]="validate('phone')" formControlName="phone" class="form-control" type="tel" id="phone" placeholder="Your phone">
+                        <div class="invalid-feedback" *ngIf="validate('phone')">This text field is required</div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="email1">Email address</label>
-                        <input class="form-control" type="email" id="email1" placeholder="johndoe@example.com">
+                        <input [required]="validate('email')" formControlName="email" class="form-control" type="email" id="email1" placeholder="johndoe@example.com">
+                        <div class="invalid-feedback" *ngIf="validate('email')">This text field is required</div>
                     </div>
-
                     <div class="mb-3">
                         <label class="form-label" for="address">Address</label>
-                        <input class="form-control" type="text" id="address" placeholder="Your address">
+                        <input [required]="validate('address')" formControlName="address" class="form-control" type="text" id="address" placeholder="Your address">
+                        <div class="invalid-feedback" *ngIf="validate('address')">This text field is required</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="textarea-input" class="form-label">Description</label>
+                        <textarea formControlName="description" class="form-control" id="textarea-input" rows="5">Describe what you want to do</textarea>
                     </div>
 
                     <button class="btn btn-primary d-block w-100" type="submit">Send</button>
