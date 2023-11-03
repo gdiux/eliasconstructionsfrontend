@@ -1,0 +1,138 @@
+<!-- Hero -->
+<section class="position-relative pt-5 bg-dark">
+
+    <!-- Background -->
+    <div class="position-absolute top-0 start-0 w-100 bg-position-bottom-center bg-size-cover bg-repeat-0" style="background-image: url(../../../assets/img/inicio/hero-bg.svg);">
+        <div class="d-lg-none" style="height: 960px;"></div>
+        <div class="d-none d-lg-block" style="height: 768px;"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container position-relative zindex-5 pt-5">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <!-- Breadcrumb -->
+                <nav class="pt-md-2 pt-lg-3 pb-4 pb-md-5 mb-xl-4" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a routerLink="/home"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">About</li>
+                    </ol>
+                </nav>
+
+                <!-- Text -->
+                <h1 class="pb-2 pb-md-3 text-white">About Elias 360 Construction pools & patios Corp</h1>
+                <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">
+                    At Elias 360 construction we have been offering our services to the Long Island community for more than 15 years and creating a reputation for high quality with our client portfolio, Specialized in Landscape and Pool
+                </p>
+                <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
+                    <div class="col">
+                        <h3 class="h2 mb-2 text-white">2,480</h3>
+                        <p class="mb-0"><strong>Total</strong> projects</p>
+                    </div>
+                    <div class="col">
+                        <h3 class="h2 mb-2 text-white">55</h3>
+                        <p class="mb-0"><strong>New Clients</strong> per Year</p>
+                    </div>
+                    <div class="col">
+                        <h3 class="h2 mb-2 text-white">100%</h3>
+                        <p class="mb-0"><strong>Garanted</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Images -->
+            <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
+                <div class="row row-cols-2 gx-3 gx-lg-4">
+                    <div class="col pt-lg-5 mt-lg-1">
+                        <img src="../../../assets/img/gallery/01.webp" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                        <img src="../../../assets/img/gallery/04.webp" class="d-block rounded-3" alt="Image">
+                    </div>
+                    <div class="col">
+                        <img src="../../../assets/img/gallery/10.webp" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
+                        <img src="../../../assets/img/gallery/09.webp" class="d-block rounded-3" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits (features) -->
+<section class="bg-dark py-5" id="benefits">
+
+    <div class="container pt-lg-5 ">
+
+        <swiper [config]="config" class="mySwiper pt-3 mt-5">
+
+            <ng-template swiperSlide class="border-end-lg px-2">
+                <div class="text-center">
+                    <img src="../../../assets/img/inicio/idea.svg" width="48" alt="Bulb icon" class="d-block mb-4 mx-auto">
+                    <h4 class="mb-2 pb-1 text-white">Creative Solutions</h4>
+                    <!-- <p class="mx-auto" style="max-width: 336px;">Sed morbi nulla pulvinar lectus tempor vel euismod accumsan.</p> -->
+                </div>
+            </ng-template>
+            <ng-template swiperSlide class="border-end-lg px-2">
+                <div class="text-center">
+                    <img src="../../../assets/img/inicio/award.svg" width="48" alt="Award icon" class="d-block mb-4 mx-auto">
+                    <h4 class="mb-2 pb-1 text-white">High Score</h4>
+                    <!-- <p class="mx-auto" style="max-width: 336px;">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet.</p> -->
+                </div>
+            </ng-template>
+            <ng-template swiperSlide class="px-2">
+                <div class="text-center">
+                    <img src="../../../assets/img/inicio/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
+                    <h4 class="mb-2 pb-1 text-white">Team of Professionals</h4>
+                    <!-- <p class="mx-auto" style="max-width: 336px;">Nam venenatis urna aenean quis feugiat et senectus turpis.</p> -->
+                </div>
+            </ng-template>
+
+
+        </swiper>
+    </div>
+
+
+</section>
+
+<!-- Social networks (Carousel on narrow screens) -->
+<section class="bg-dark">
+
+    <div class="container text-center py-5">
+
+
+
+        <h2 class="h1 mb-4 text-white">We Have Social Networks</h2>
+        <p class="fs-lg text-muted pb-2 mb-5">Follow us and keep up to date with the freshest news!</p>
+
+
+        <swiper [config]="configSocial" class="mySwiper pt-3 mt-5">
+
+            <ng-template swiperSlide>
+                <div class="position-relative text-center border-end mx-n1">
+                    <a href="https://www.facebook.com/profile.php?id=100089447791609" class="btn btn-icon btn-secondary btn-facebook btn-lg stretched-link" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <div class="pt-4">
+                        <h6 class="mb-1 text-white">Facebook</h6>
+                        <p class="fs-sm text-muted mb-0">360construction</p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="position-relative text-center border-end mx-n1">
+                    <a href="https://www.instagram.com/elias360construction/" target="_blank" class="btn btn-icon btn-secondary btn-instagram btn-lg stretched-link" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <div class="pt-4">
+                        <h6 class="mb-1 text-white">Instagram</h6>
+                        <p class="fs-sm text-muted mb-0">@elias360construction</p>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+
+
+    </div>
+</section>
